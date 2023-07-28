@@ -1,0 +1,137 @@
+@import "variables";
+
+.main {
+  padding: 0 7.5% 2% 7.5%;
+  @media (max-width: $mobile) {
+    padding-bottom: 10%;
+  }
+  > .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 15px;
+    > h2 {
+      color: $gray-3;
+      border-bottom: 2px solid $blue-1;
+      font-size: 1.5rem;
+      width: 33%;
+      padding-bottom: 10px;
+      font-family: $mainFont;
+      margin: 0;
+    }
+  }
+
+  > .grid-products {
+    padding: 0 2%;
+    display: grid;
+    width: 100%;
+    gap: 6px;
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    @media (min-width: $largeMobile) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: $smallDesktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    > .card {
+      background-color: #f5f5f5;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+        rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      height: 382px;
+      width: 100%;
+      border-radius: 16px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.3s ease all;
+      }
+      > .image-container {
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 7% 0;
+        > .img {
+          height: 152px;
+          width: 110px;
+        }
+      }
+      > .informations {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        > h3 {
+          text-align: center;
+          font-size: $size087rem;
+          font-family: $mainFont;
+          line-height: 18px;
+          padding: 5px 25px;
+          color: #222222;
+          margin: 0;
+        }
+        > .category {
+          margin-bottom: 10px;
+          text-align: center;
+          justify-content: center;
+          display: flex;
+          border: 1px solid $white-2;
+          border-radius: 8px;
+          color: $gray-2;
+          font-size: $size075rem;
+          font-weight: $bold;
+          font-family: $mainFont;
+          background: $white;
+          padding: 2px;
+          width: 85%;
+        }
+        > .rating {
+          > .ui {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            > .active {
+              color: $blue-2 !important;
+              text-shadow: 0 -1px 0 transparent, -1px 0 0 transparent,
+                0 1px 0 transparent, 1px 0 0 transparent !important;
+            }
+          }
+          > .count-rating {
+            font-size: $size087rem;
+            color: $blue-2;
+            font-family: $mainFont;
+            text-align: center;
+            font-weight: $bold;
+            margin: 0;
+          }
+          > .length {
+            color: $gray-2;
+            font-weight: $bold;
+            font-size: $size075rem;
+            font-family: $mainFont;
+            text-align: center;
+          }
+        }
+      }
+      > .container-price {
+        justify-content: center;
+        align-items: flex-end;
+        padding-top: 5px;
+        display: flex;
+        > .price {
+          color: $green-price;
+          font-family: $mainFont;
+          font-size: $size1rem;
+          line-height: 18px;
+          font-weight: $bold;
+        }
+      }
+    }
+  }
+}

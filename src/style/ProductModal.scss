@@ -1,0 +1,106 @@
+@import "variables";
+.ui {
+  &.page {
+    &.modals {
+      &.dimmer {
+        padding: 0;
+      }
+    }
+  }
+  > .container-modal {
+    display: flex !important;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+    > .container-image {
+      > .image {
+        height: 380px;
+        width: 277px;
+        padding: 10px;
+        @media (max-width: $mobile) {
+          width: 100%;
+        }
+      }
+    }
+    > .text {
+      padding: 0 5%;
+      @media (max-width: $mobile) {
+        padding: 5% 5%;
+      }
+      > .title {
+        color: #222;
+        font-family: $mainFont;
+        font-size: $size1rem;
+      }
+      > .rating {
+        display: flex;
+        > .ui {
+          font-size: 1.2rem;
+          margin-bottom: 5px;
+          > .active {
+            color: $blue-2 !important;
+            text-shadow: 0 -1px 0 transparent, -1px 0 0 transparent,
+              0 1px 0 transparent, 1px 0 0 transparent !important;
+          }
+        }
+        > .count-rating {
+          font-size: $size1rem;
+          color: $blue-2;
+          font-family: $mainFont;
+          font-weight: $bold;
+        }
+      }
+      > .length {
+        color: $gray-2;
+        font-family: $mainFont;
+        font-size: $size1rem;
+      }
+      > .price {
+        color: $green-price;
+        font-family: $mainFont;
+        font-size: $size1rem;
+        line-height: 18px;
+        font-weight: $bold;
+        display: flex;
+        flex-direction: column;
+        &::after {
+          content: "";
+          border: 0.5px solid $white-1;
+          width: 100%;
+          margin-top: 50px;
+          @media (max-width: $mobile) {
+            margin-top: 35px;
+          }
+        }
+      }
+      > .container-description {
+        margin-top: 30px;
+        @media (max-width: $mobile) {
+          margin-top: 20px;
+        }
+        > .description {
+          color: $gray-2;
+          font-size: $size1rem;
+          font-weight: 400;
+          font-family: $mainFont;
+        }
+      }
+      > .category {
+        border: 1px solid $white-2;
+        border-radius: 8px;
+        color: $gray-2;
+        font-size: $size087rem;
+        font-weight: $bold;
+        font-family: $mainFont;
+        background: $white;
+        padding: 2px;
+        width: 33%;
+        display: flex;
+        justify-content: center;
+        @media (max-width: $mobile) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
